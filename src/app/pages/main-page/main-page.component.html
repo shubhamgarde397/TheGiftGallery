@@ -1,0 +1,239 @@
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" (click)="addF(0)">Tamil Book</a>
+        <a class="navbar-brand" (click)="addF(1)">Add</a>
+        <a class="navbar-brand" (click)="addF(2)">Display</a>
+        <a class="navbar-brand" (click)="addF(3)">Exam</a>
+      </div>
+    </div>
+
+  </nav>
+  <div *ngIf="add==1">
+    <div class="well">
+
+      <form [formGroup]="myFormGroup" (ngSubmit)="storeTurnBookData(myFormGroup)" submitted=true enctype="multipart/form data"
+        action="/" name="myform" id="myform">
+        <!-- turnbookDate-->
+        <div class="form-group row">
+          <div class="col-xs-12">
+           Type : <select id="partyType" class="form-control" formControlName="type">
+            <option>Verb</option>
+            <option>Adjective</option>
+            <option>Noun</option>
+          </select>
+          </div>
+    </div>
+        <div class="form-group row">
+          <div class="col-xs-12">
+            Tamil Word : <input type="text" id="text" class="form-control" formControlName="tamilWord">
+          </div>
+    </div>
+
+
+    <div class="form-group row">
+      <div class="col-xs-12">
+        Translation - <input type="text" id="translation" class="form-control" formControlName="translation">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-xs-12">
+        PNG Particle - <input type="text" id="translation" class="form-control" formControlName="png">
+      </div>
+    </div>
+
+      <div class="form-group row">
+      <div class="col-xs-12">
+        Past Particle - <input type="text" id="translation" class="form-control" formControlName="pastParticle">
+      </div>
+    </div>
+
+      <div class="form-group row">
+      <div class="col-xs-12">
+        Present Particle - <input type="text" id="translation" class="form-control" formControlName="preParticle">
+      </div>
+    </div>
+
+      <div class="form-group row">
+      <div class="col-xs-12">
+        Future Particle - <input type="text" id="translation" class="form-control" formControlName="fParticle">
+      </div>
+    </div>
+
+      <div class="form-group row">
+      <div class="col-xs-12">
+        Past Example - <input type="text" id="translation" class="form-control" formControlName="fExample">
+      </div>
+    </div>
+
+      <div class="form-group row">
+      <div class="col-xs-12">
+        Present Example - <input type="text" id="translation" class="form-control" formControlName="fExample">
+      </div>
+    </div>
+
+      <div class="form-group row">
+      <div class="col-xs-12">
+        Future Example - <input type="text" id="translation" class="form-control" formControlName="fExample">
+      </div>
+    </div>
+
+
+
+          <div class="form-group row">
+          <div class="col-xs-12">
+            Type-Group:
+            <select id="partyType" class="form-control" formControlName="group">
+              <option>1a</option>
+              <option>1b</option>
+              <option>1c</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>NA</option>
+            </select>
+          </div>
+        </div>
+
+          <div class="form-group row">
+          <div class="col-xs-12">
+            Type-SW:
+            <select id="partyType" class="form-control" formControlName="SW">
+              <option>Strong</option>
+              <option>Weak</option>
+              <option>NA</option>
+            </select>
+          </div>
+        </div>
+
+          <div class="form-group row">
+          <div class="col-xs-12">
+            Type-RI:
+            <select id="partyType" class="form-control" formControlName="RI">
+              <option>Regular</option>
+              <option>Irregular</option>
+              <option>NA</option>
+            </select>
+          </div>
+        </div>
+    
+          <div class="form-group row">
+          <div class="col-xs-12">
+            Lot A-Z :
+            <select id="partyType" class="form-control" formControlName="lotAZ">
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>D</option>
+              <option>E</option>
+              <option>F</option>
+              <option>G</option>
+              <option>H</option>
+              <option>I</option>
+              <option>J</option>
+              <option>K</option>
+              <option>L</option>
+              <option>M</option>
+              <option>N</option>
+              <option>O</option>
+              <option>P</option>
+              <option>Q</option>
+              <option>R</option>
+              <option>S</option>
+              <option>T</option>
+              <option>U</option>
+              <option>V</option>
+              <option>W</option>
+              <option>X</option>
+              <option>Y</option>
+              <option>Z</option>
+              <option>NA</option>
+            </select>
+          </div>
+        </div>
+
+          <div class="form-group row">
+            <div class="col-xs-12">
+            Lot 0-9 : 
+            <select id="partyType" class="form-control" formControlName="lot09">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>NA</option>
+            </select>
+          </div>
+        </div>
+   
+          <div class="form-group row">
+          <div class="col-xs-12">
+            Proficiency:
+            <select id="partyType" class="form-control" formControlName="proficiency">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+        </div>
+
+        
+
+          
+ 
+    
+        <div class="row">
+          <div class="form-group" class="col-xs-2">
+          <div class="form-group" class="col-xs-1">
+            <button type="submit" class="btn btn-primary" [disabled]='!myFormGroup.valid'>
+              <i class="material-icons">send</i>
+            </button>
+          </div>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="add==2">
+    <button type="submit" class="btn btn-primary" (click)="fetchData()">
+      <i class="material-icons">download</i>
+    </button>
+    <table class="table" style="width:100%" align="center" id="example">
+      <thead>
+        <tr class="table-header">
+          <th>Srno</th>
+          <th>Word</th>
+          <th>Type</th>
+          <th>Translation</th>
+          <th>Group</th>
+          <th>PPF</th>
+        </tr>
+      </thead>
+  
+  
+      <tbody>
+        <tr *ngFor="let i of wordslist;let j = index">
+          <td>{{j+1}}</td>
+          <td>{{i.tamilWord}}</td>
+          <td>{{i.type}}</td>
+          <td>{{i.translation}}</td>
+          <td>{{i.group}}</td>
+          <td>{{i.pastParticle}}:{{i.preParticle}}:{{i.fParticle}}</td>
+  
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div *ngIf="add==3"><app-exam></app-exam></div>
+    <div *ngIf="add==0"><h1>Welcome to Tamil Dictionary. This is our Home Page</h1>
+  </div>
